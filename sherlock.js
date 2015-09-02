@@ -22,3 +22,36 @@ _INPUT = "2\n3 9\n17 24";
 */
 
 //----- Start your code here -------
+console.log("Input "+_INPUT);	
+INPUT = _INPUT.split("\n");
+
+for(i=1;i< INPUT.length;i++)
+{
+	R=INPUT[i].split(' ');
+	A= R[0];
+	B= R[1];
+
+	contador=0;
+	 while (A<=B)
+ {
+ 	if(A<0)
+ 	{
+ 		console.log("Error no existen Raices Negativas");
+ 		break;
+ 	}
+ 	else
+ 	{
+ 		Raiz=Math.sqrt(A);
+ 		if(Raiz % 1!=0)
+ 		{
+ 			A++;
+ 		}else
+ 		{
+ 			
+ 			contador++;
+ 			A++;
+ 		}
+ 	}
+ }
+console.log(contador);
+}
